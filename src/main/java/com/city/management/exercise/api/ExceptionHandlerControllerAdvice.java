@@ -11,7 +11,7 @@ import org.springframework.web.context.request.WebRequest;
 
 @ControllerAdvice
 @Slf4j
-public class ExceptionHandlerController {
+public class ExceptionHandlerControllerAdvice {
 
     @ExceptionHandler(value = {BusinessException.class})
     public ResponseEntity<ErrorMessageResponse> manageBusinessException(BusinessException e, WebRequest request) {
